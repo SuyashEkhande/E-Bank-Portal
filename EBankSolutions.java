@@ -118,6 +118,7 @@ public class EBankSolutions {
             System.out.println("Logged In Successfully with account number: "+accountNumber+"\n-------------------------------------");   
             System.out.println("Choose Option Number From Below Menu");
             System.out.println("1.Deposit Amount\n2.Withdraw Amount\n3.Display Account Info\n4.Close Account\n5.Exit");
+            ch=scan.nextInt();
             switch(ch)
             {
                 case 1: DepositAmount();
