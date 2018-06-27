@@ -1,7 +1,8 @@
 /**
  *      Project Name : E Bank Solutions Portal Application
  *       Author Name : Suyash Jayendra Ekhande
- *           License : GPL v3.0
+ *               IDE : Netbeans
+ *           License : MIT
  *              Date : 20/6/2018
  **/
 
