@@ -114,24 +114,29 @@ public class EBankSolutions {
         accNum=scan.nextLong();
         System.out.println("Enter Your Password  : ");
         passWd=scan.next();           
-        if (accNum==this.accountNumber && passWd==this.password) {
+        if (accNum==this.accountNumber && passWd.equals(passWd)) {
             System.out.println("Logged In Successfully with account number: "+accountNumber+"\n-------------------------------------");   
-            System.out.println("Choose Option Number From Below Menu");
-            System.out.println("1.Deposit Amount\n2.Withdraw Amount\n3.Display Account Info\n4.Close Account\n5.Exit");
-            ch=scan.nextInt();
-            switch(ch)
-            {
-                case 1: DepositAmount();
-                        break;
-                case 2: WithdrawAmount();
-                        break;
-                case 3: DisplayAccount();
-                        break;
-                case 4: System.out.println("You cannot close your account. Feature Coming Soon...");
-                        break;
-                case 5: System.exit(0);
-                        break;
-            }
+            do{
+                
+            
+                System.out.println("Choose Option Number From Below Menu");
+                System.out.println("1.Deposit Amount\n2.Withdraw Amount\n3.Display Account Info\n4.Close Account\n5.Exit");
+                ch=scan.nextInt();
+                switch(ch)
+                {
+                    case 1: DepositAmount();
+                            break;
+                    case 2: WithdrawAmount();
+                            break;
+                    case 3: DisplayAccount();
+                            break;
+                    case 4: System.out.println("You cannot close your account. Feature Coming Soon...");
+                            System.gc();
+                            break;
+                    case 5: System.exit(0);
+                            break;
+                }
+            }while(ch!=5);
         } 
         else if(accNum!=accountNumber && passWd!=password) {
             System.out.println("You have Entered Incorrect Account Number or Password. Please Check Again.");
